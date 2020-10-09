@@ -1,0 +1,17 @@
+<launch>
+
+  <node pkg='urg_node' name='lidar1' type='urg_node' required='true' >
+    <param name='ip_address' value='192.168.0.123' />
+    <param name="frame_id" value="forward_laser" /> 
+    <remap from="scan" to="scan1"/>
+  </node>
+
+  <node pkg='urg_node' name='lidar2' type='urg_node' required='true' >
+    <param name='ip_address' value='192.168.0.10' />
+    <param name="frame_id" value="back_laser" />
+    <remap from="scan" to="scan2"/>
+  </node>
+
+  
+  <include file='$(find pimouse_slam)/launch/static_tf.launch' />
+</launch>  

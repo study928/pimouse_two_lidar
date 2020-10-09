@@ -1,0 +1,7 @@
+<launch>
+
+  <node pkg="tf" type="static_transform_publisher" name="front" args="0 0 0.3 0 0 0 base_link forward_laser 10" />
+
+  <node pkg="tf" type="static_transform_publisher" name="back" args="0 0 0.6 3.13 0 0 base_link back_laser 10" />
+
+</launch>
