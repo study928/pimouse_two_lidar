@@ -13,5 +13,5 @@
     <remap from="scan" to="scan2"/>
   </node>
 
-  <include file='$(find pimouse_slam)/launch/static_tf.launch' />
+  <include file='$(find pimouse_two_lidar)/launch/static_tf.launch' />
 </launch>
